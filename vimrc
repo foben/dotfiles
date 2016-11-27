@@ -46,16 +46,15 @@ set nowrap                 " no line wrapping
 set colorcolumn=89         " 
 set hlsearch               " Highlight search results
 set clipboard+=unnamedplus " Yank to clipboard
+set noswapfile
+
 " Enable menu for tab selection
 set wildmenu
 set wildmode=longest,list,full
+
 " Disable some weirdness
 inoremap <C-Space> <C-x><C-o>
 " set omnifunc=syntaxcomplete#Complete " Built-in autocomplete
-
-
-" Eclim
-let g:EclimCompletionMethod = 'omnifunc'
 
 "colorscheme solarized
 "set background=dark
