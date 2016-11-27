@@ -57,14 +57,14 @@ inoremap <C-Space> <C-x><C-o>
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
-colorscheme solarized
-set background=dark
-"Colorscheme and Font for gvim	
-if has('gui_running')
-    set guifont=Source\ Code\ Pro\ 12
-    colorscheme solarized
-    set background=dark
-endif
+"colorscheme solarized
+"set background=dark
+""Colorscheme and Font for gvim	
+"if has('gui_running')
+"    set guifont=Source\ Code\ Pro\ 12
+"    colorscheme solarized
+"    set background=dark
+"endif
 
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
