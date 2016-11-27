@@ -1,4 +1,11 @@
-" Set up Vundle
+" To set up Vundle:
+" 1. run
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+" 2. from vim, run
+" :PluginInstall
+"
+" more info at
 " https://github.com/gmarik/Vundle.vim
 set nocompatible
 filetype off
