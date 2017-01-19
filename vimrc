@@ -23,18 +23,25 @@ call vundle#end()
 
 "Settings for specific filetypes
 filetype plugin indent on
+" Scripting, configs, text
 autocmd FileType text setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType tex setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType css setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType fstab setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType sh setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType json setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType yaml setlocal expandtab shiftwidth=2 softtabstop=2
+" Programming
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType java setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType fstab setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType sh setlocal expandtab shiftwidth=2 softtabstop=2
+" Web stuff
+autocmd FileType html setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal expandtab shiftwidth=2 softtabstop=2
+" LateX
+autocmd FileType tex setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType bib setlocal expandtab shiftwidth=2 softtabstop=2
 
 " MISC
