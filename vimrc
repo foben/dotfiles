@@ -21,7 +21,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
-"Settings for specific filetypes
+"
+" Settings for specific filetypes
+"
 filetype plugin indent on
 " Scripting, configs, text
 autocmd FileType text setlocal expandtab shiftwidth=2 softtabstop=2
@@ -44,6 +46,11 @@ autocmd FileType css setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType tex setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType bib setlocal expandtab shiftwidth=2 softtabstop=2
 
+" Search settings
+set hlsearch               " Highlight search results
+set ignorecase
+set smartcase
+
 " MISC
 set autoindent             " re-indent on newline
 syntax on                  " syntax highlighting
@@ -51,7 +58,6 @@ set number                 " show line numbers
 set ruler                  " always show cursor pos
 set nowrap                 " no line wrapping
 set colorcolumn=89         " 
-set hlsearch               " Highlight search results
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile
 
