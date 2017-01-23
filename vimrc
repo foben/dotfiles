@@ -60,6 +60,7 @@ set nowrap                 " no line wrapping
 set colorcolumn=89         " 
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile
+set foldmethod=indent
 
 " Enable menu for tab selection
 set wildmenu
