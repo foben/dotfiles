@@ -61,6 +61,7 @@ set colorcolumn=89         "
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile
 set foldmethod=indent
+set foldlevel=20
 
 " Enable menu for tab selection
 set wildmenu
