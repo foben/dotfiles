@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'chase/vim-ansible-yaml'
 
 call vundle#end()
 
@@ -30,6 +31,7 @@ autocmd FileType text setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType fstab setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType sh setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType json setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType xml setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType yaml setlocal expandtab shiftwidth=2 softtabstop=2
 " Programming
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
@@ -82,3 +84,7 @@ inoremap <C-Space> <C-x><C-o>
 
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
+"
+
+set laststatus=2
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
