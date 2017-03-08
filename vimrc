@@ -17,8 +17,13 @@ Plugin 'gmarik/Vundle.vim'
 " Further Vundle plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'Valloric/YouCompleteMe'
+" To setup YCM (Fedora):
+" sudo dnf install automake gcc gcc-c++ kernel-devel cmake
+" sudo dnf install python-devel python3-devel
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py
 
 call vundle#end()
 
@@ -53,6 +58,18 @@ set hlsearch               " Highlight search results
 set ignorecase
 set smartcase
 
+" Statusline settings
+set laststatus=2
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+
+" Enable menu for tab selection
+set wildmenu
+set wildmode=longest,list,full
+
+" Folding
+set foldmethod=indent
+set foldlevel=20
+
 " MISC
 set autoindent             " re-indent on newline
 syntax on                  " syntax highlighting
@@ -62,12 +79,6 @@ set nowrap                 " no line wrapping
 set colorcolumn=89         " 
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile
-set foldmethod=indent
-set foldlevel=20
-
-" Enable menu for tab selection
-set wildmenu
-set wildmode=longest,list,full
 
 " Disable some weirdness
 inoremap <C-Space> <C-x><C-o>
@@ -85,6 +96,3 @@ inoremap <C-Space> <C-x><C-o>
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
 "
-
-set laststatus=2
-set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
