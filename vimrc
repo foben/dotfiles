@@ -38,6 +38,9 @@ autocmd FileType sh setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType json setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType xml setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType yaml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd BufEnter *.yml.j2 :setlocal filetype=yaml
+autocmd BufEnter *.yaml.j2 :setlocal filetype=yaml
+autocmd FileType markdown setlocal expandtab shiftwidth=2 softtabstop=2
 " Programming
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType java setlocal expandtab shiftwidth=4 softtabstop=4
@@ -78,7 +81,8 @@ set ruler                  " always show cursor pos
 set nowrap                 " no line wrapping
 set colorcolumn=89         " 
 set clipboard+=unnamedplus " Yank to clipboard
-set noswapfile
+set noswapfile             " Disable .swp files
+" nmap $ g_                " dont include line break for $ movement
 
 " Disable some weirdness
 inoremap <C-Space> <C-x><C-o>
