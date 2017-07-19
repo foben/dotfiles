@@ -48,6 +48,7 @@ autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType go setlocal expandtab shiftwidth=2 softtabstop=2 nolist
 " Web stuff
 autocmd FileType html setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
@@ -82,6 +83,7 @@ set nowrap                 " no line wrapping
 set colorcolumn=89         " 
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile             " Disable .swp files
+"set list                   " Enable end-of-line char
 " nmap $ g_                " dont include line break for $ movement
 
 " Disable some weirdness
