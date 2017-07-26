@@ -28,6 +28,12 @@ if [ -f ~/dotfiles/bashgit ]; then
 fi
 
 #
+# HISTORY SETTINGS
+#
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+#
 # LESS SETUP
 #
 #alias less=less -S
