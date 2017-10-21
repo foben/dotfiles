@@ -32,6 +32,8 @@ fi
 #
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+export HISTSIZE=10000
+export HISEFILESIZE=10000
 
 #
 # LESS SETUP
@@ -60,4 +62,6 @@ alias dtree="tree -d"
 alias cd..4="cd ../../../../"
 alias vim="vimx"
 alias c="xclip -sel c"
-alias grepi="grep -i"
+alias grepi="grep -irn"
+alias gitlo="git log -n"
+alias prettyjson="python -m json.tool"
