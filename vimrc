@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
 " To setup YCM (Fedora):
 " sudo dnf install automake gcc gcc-c++ kernel-devel cmake
 " sudo dnf install python-devel python3-devel
@@ -77,10 +78,11 @@ set foldlevel=20
 " MISC
 set autoindent             " re-indent on newline
 syntax on                  " syntax highlighting
-set number                 " show line numbers
+set relativenumber         " show relative line numbers
+set number                 " also show current line number
 set ruler                  " always show cursor pos
 set nowrap                 " no line wrapping
-set colorcolumn=89         " 
+"set colorcolumn=89        " 
 set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile             " Disable .swp files
 "set list                   " Enable end-of-line char
