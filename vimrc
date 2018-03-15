@@ -20,6 +20,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
+Plugin 'christianrondeau/vim-base64'
+Plugin 'kchmck/vim-coffee-script'
 " To setup YCM (Fedora):
 " sudo dnf install automake gcc gcc-c++ kernel-devel cmake
 " sudo dnf install python-devel python3-devel
@@ -49,7 +51,8 @@ autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType go setlocal expandtab shiftwidth=2 softtabstop=2 nolist
+autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 " Web stuff
 autocmd FileType html setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
@@ -62,6 +65,7 @@ autocmd FileType bib setlocal expandtab shiftwidth=2 softtabstop=2
 set hlsearch               " Highlight search results
 set ignorecase
 set smartcase
+vnoremap // y/<C-R>"<CR>   " double-slash to search highlighted text
 
 " Statusline settings
 set laststatus=2
@@ -104,3 +108,7 @@ inoremap <C-Space> <C-x><C-o>
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
 "
+"color desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine ctermbg=8 "8 = dark gray, 15 = white
