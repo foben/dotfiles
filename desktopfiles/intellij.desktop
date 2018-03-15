@@ -1,10 +1,11 @@
 [Desktop Entry]
-Version=1.0
-Name=IntelliJ IDEA
-GenericName=Java IDE
-Comment=IntelliJ IDEA.
-Exec=/opt/idea-IU-163.11103.6/idea.sh
-Icon=/opt/idea-IU-163.11103.6/bin/idea.png
-Terminal=false
 Type=Application
+Version=1.0
+Name=Intelli
+GenericName=Java IDE
+Comment=IntelliJ IDEA IDE YO
+Exec=/opt/idea-IU-173.4548.28/bin/idea.sh
+Icon=/opt/idea-IU-173.4548.28/bin/idea.png
+Terminal=false
 Categories=Development;IDE
+X-Desktop-File-Install-Version=0.23
