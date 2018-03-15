@@ -14,6 +14,8 @@ fi
 if [ -f ~/.bashrc_additions ]; then
 	. ~/.bashrc_additions
 fi
+. ~/.bashrc_kubectl
+. ~/.bashrc_oc
 
 # 
 # PROMPT
@@ -53,7 +55,7 @@ export GOPATH=/home/$USERNAME/go
 # MISC. ALIASES
 #
 alias listbranches='for D in *; do pushd "$D" > /dev/null 2>/dev/null && printf "%s %s\n" "${PWD##*/}" "$(git branch | grep \*)" && popd > /dev/null 2>/dev/null; done'
-alias ll="ls -lah"
+alias ll="ls -lh"
 alias lll="ls -lah"
 alias cp="cp -v"
 alias mv="mv -v"
@@ -62,6 +64,10 @@ alias dtree="tree -d"
 alias cd..4="cd ../../../../"
 alias vim="vimx"
 alias c="xclip -sel c"
-alias grepi="grep -irn"
+alias grepi="grep -Iirn"
 alias gitlo="git log -n"
 alias prettyjson="python -m json.tool"
+alias xmo="xmodmap ~/.Xmodmap"
+alias kuc="kubectl"
+alias gitk="gitk --all &"
+alias please="sudo"
