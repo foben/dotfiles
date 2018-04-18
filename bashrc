@@ -71,3 +71,12 @@ alias xmo="xmodmap ~/.Xmodmap"
 alias kuc="kubectl"
 alias gitk="gitk --all &"
 alias please="sudo"
+alias auf="xdg-open"
+
+#
+# PATH additions
+#
+
+export PATH=$PATH:/opt/helm
+export PATH=$PATH:/opt/google-cloud-sdk/bin
+export PATH=$PATH:/opt/cfssl/
