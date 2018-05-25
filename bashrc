@@ -72,6 +72,12 @@ alias kuc="kubectl"
 alias gitk="gitk --all &"
 alias please="sudo"
 alias auf="xdg-open"
+alias tl="task list"
+alias td="task done"
+alias ta="task add"
+alias gits="git status"
+alias lock="i3lock -f -c \"$(tr -dc 'A-F0-9' < /dev/urandom | head -c6)\""
+alias diso="date -I"
 
 #
 # PATH additions
@@ -80,3 +86,4 @@ alias auf="xdg-open"
 export PATH=$PATH:/opt/helm
 export PATH=$PATH:/opt/google-cloud-sdk/bin
 export PATH=$PATH:/opt/cfssl/
+export PATH=$PATH:/home/felix/.bin
