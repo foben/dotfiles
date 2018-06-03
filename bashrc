@@ -78,6 +78,8 @@ alias ta="task add"
 alias gits="git status"
 alias lock="i3lock -f -c \"$(tr -dc 'A-F0-9' < /dev/urandom | head -c6)\""
 alias diso="date -I"
+alias b64="base64 -w 0"
+alias b64d="base64 --decode"
 
 #
 # PATH additions
@@ -87,3 +89,4 @@ export PATH=$PATH:/opt/helm
 export PATH=$PATH:/opt/google-cloud-sdk/bin
 export PATH=$PATH:/opt/cfssl/
 export PATH=$PATH:/home/felix/.bin
+export PATH=$PATH:/home/felix/dotfiles/scripts
