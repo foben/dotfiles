@@ -22,6 +22,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'christianrondeau/vim-base64'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'chr4/nginx.vim'
 " To setup YCM (Fedora):
 " sudo dnf install automake gcc gcc-c++ kernel-devel cmake
 " sudo dnf install python-devel python3-devel
@@ -44,6 +46,7 @@ autocmd FileType yaml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufEnter *.yml.j2 :setlocal filetype=yaml
 autocmd BufEnter *.yaml.j2 :setlocal filetype=yaml
 autocmd FileType markdown setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.conf set filetype=nginx
 " Programming
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType java setlocal expandtab shiftwidth=4 softtabstop=4
@@ -98,7 +101,6 @@ nnoremap <silent> <A-l> :wincmd l<CR>
 nnoremap <silent> <A-q> :wincmd q<CR>
 
 
-
 " MISC
 set autoindent             " re-indent on newline
 syntax on                  " syntax highlighting
@@ -111,6 +113,8 @@ set clipboard+=unnamedplus " Yank to clipboard
 set noswapfile             " Disable .swp files
 "set list                   " Enable end-of-line char
 " nmap $ g_                " dont include line break for $ movement
+"
+nnoremap <C-d> :read !date -I <CR>
 
 " Disable some weirdness
 inoremap <C-Space> <C-x><C-o>
