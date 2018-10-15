@@ -33,7 +33,7 @@ fi
 #
 # DIRCOLORS
 #
-eval `dircolors dotfiles/dircolors`
+eval `dircolors /home/felix/dotfiles/dircolors`
 
 #
 # HISTORY SETTINGS

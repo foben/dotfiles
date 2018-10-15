@@ -37,7 +37,7 @@ _bashgit_update_ps1() {
     local         red='\[\e[0;31m\]'
     local       green='\[\e[0;32m\]'
     local      yellow='\[\e[0;33m\]'
-    local   dark_gray='\[\e[1;30m\]'
+    local   dark_gray='\[\e[1;32m\]'
     local  color_none='\[\e[0m\]'
 
     if [ -z "${_BASHGIT_PS1_PREV+x}" ] || [ "$PS1" != "$_BASHGIT_PS1_PREV" ]; then
