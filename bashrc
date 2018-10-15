@@ -29,6 +29,12 @@ if [ -f ~/dotfiles/bashgit ]; then
     . ~/dotfiles/bashgit
 fi
 
+
+#
+# DIRCOLORS
+#
+eval `dircolors dotfiles/dircolors`
+
 #
 # HISTORY SETTINGS
 #

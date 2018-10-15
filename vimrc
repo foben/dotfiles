@@ -120,8 +120,8 @@ nnoremap <C-d> :read !date -I <CR>
 inoremap <C-Space> <C-x><C-o>
 " set omnifunc=syntaxcomplete#Complete " Built-in autocomplete
 
-"colorscheme solarized
-"set background=dark
+colorscheme solarized
+set background=dark
 ""Colorscheme and Font for gvim	
 "if has('gui_running')
 "    set guifont=Source\ Code\ Pro\ 12
