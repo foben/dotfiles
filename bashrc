@@ -68,18 +68,29 @@ alias grepi="grep -Iirn"
 alias gitlo="git log -n"
 alias prettyjson="python -m json.tool"
 alias xmo="xmodmap ~/.Xmodmap"
-alias kuc="kubectl"
+alias k="kubectl"
 alias gitk="gitk --all &"
 alias please="sudo"
 alias auf="xdg-open"
 alias tl="task list"
 alias td="task done"
 alias ta="task add"
+alias te="task edit"
 alias gits="git status"
 alias lock="i3lock -f -c \"$(tr -dc 'A-F0-9' < /dev/urandom | head -c6)\""
 alias diso="date -I"
 alias b64="base64 -w 0"
 alias b64d="base64 --decode"
+alias k="kubectl"
+alias kcns="kubectl config set-context $(kubectl config current-context) --namespace"
+alias dwatch="watch -d -n 1"
+alias devops="cd /home/felix/dev/svh/devops"
+alias oc37=oc
+
+#function dotil {
+#  echo $1
+#  until $($1); do echo "retrying..."; sleep 1; done
+#}
 
 #
 # PATH additions
@@ -90,3 +101,4 @@ export PATH=$PATH:/opt/google-cloud-sdk/bin
 export PATH=$PATH:/opt/cfssl/
 export PATH=$PATH:/home/felix/.bin
 export PATH=$PATH:/home/felix/dotfiles/scripts
+export EDITOR=vim
