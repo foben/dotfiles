@@ -92,11 +92,9 @@ alias kcns="kubectl config set-context $(kubectl config current-context) --names
 alias dwatch="watch -d -n 1"
 alias devops="cd /home/felix/dev/svh/devops"
 alias oc37=oc
-
-#function dotil {
-#  echo $1
-#  until $($1); do echo "retrying..."; sleep 1; done
-#}
+alias gnutime="/usr/bin/time"
+alias gnutimev='/usr/bin/time -f "\nreal: %E\nuser: %U\nsys: %S\n\nmaxmem: %M\navgres: %t\navgmem: %K\n\nfilein: %I\nfileout: %O\nsockin: %r\nsockout: %s"'
+alias melde='meld <(echo "") <(echo "") &'
 
 #
 # PATH additions
