@@ -134,5 +134,6 @@ set background=dark
 "
 "color desert
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
-hi CursorLine ctermbg=8 "8 = dark gray, 15 = white
+hi CursorLine cterm=underline
+
+:nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
