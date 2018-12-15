@@ -85,20 +85,24 @@ set foldlevel=20
 " Window navigation with alt key
 "
 " Fix for meta key handling (https://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim)
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-
-set timeout ttimeoutlen=50
-
-nnoremap <silent> <A-j> :wincmd j<CR>
-nnoremap <silent> <A-h> :wincmd h<CR>
-nnoremap <silent> <A-k> :wincmd k<CR>
-nnoremap <silent> <A-l> :wincmd l<CR>
-nnoremap <silent> <A-q> :wincmd q<CR>
+"let c='a'
+"while c <= 'z'
+"  exec "set <A-".c.">=\e".c
+"  exec "imap \e".c." <A-".c.">"
+"  let c = nr2char(1+char2nr(c))
+"endw
+"
+"set timeout ttimeoutlen=50
+"
+"nnoremap <silent> <A-j> :wincmd j<CR>
+"nnoremap <silent> <A-h> :wincmd h<CR>
+"nnoremap <silent> <A-l> :wincmd l<CR>
+"nnoremap <silent> <A-q> :wincmd q<CR>
+nnoremap <space>h :wincmd h<CR>
+nnoremap <space>j :wincmd j<CR>
+nnoremap <space>k :wincmd k<CR>
+nnoremap <space>l :wincmd l<CR>
+nnoremap <space>q :wincmd q<CR>
 
 
 " MISC
@@ -134,6 +138,6 @@ set background=dark
 "
 "color desert
 set cursorline
-hi CursorLine cterm=underline
+" hi CursorLine cterm=underline
 
 :nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
