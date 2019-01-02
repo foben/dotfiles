@@ -20,14 +20,19 @@ fi
 # 
 # PROMPT
 #
-# Setup bashgit, which may also be in ~/dotfiles
+# Setup bashgit
 export PS1='\[\033[01;35m\]\W\[\033[00m\]> '
-if [ -f ~/.bashgit ]; then
-    . ~/.bashgit
-fi
 if [ -f ~/dotfiles/bashgit ]; then
     . ~/dotfiles/bashgit
 fi
+
+prompt_status() {
+  if [ $? -eq 0 ]; then
+      PS1=`echo $PS1 | sed 's/./O/1'`
+  else
+      PS1=echo $PS1 | sed 's/./X/1'
+  fi
+}
 
 
 #
@@ -39,6 +44,7 @@ eval `dircolors /home/felix/dotfiles/dircolors`
 # HISTORY SETTINGS
 #
 shopt -s histappend
+#PROMPT_COMMAND="prompt_status;history -a;$PROMPT_COMMAND"
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export HISTSIZE=10000
 export HISEFILESIZE=10000
@@ -95,6 +101,7 @@ alias oc37=oc
 alias gnutime="/usr/bin/time"
 alias gnutimev='/usr/bin/time -f "\nreal: %E\nuser: %U\nsys: %S\n\nmaxmem: %M\navgres: %t\navgmem: %K\n\nfilein: %I\nfileout: %O\nsockin: %r\nsockout: %s"'
 alias melde='meld <(echo "") <(echo "") &'
+alias svenv='source venv/bin/activate'
 
 #
 # PATH additions
@@ -105,4 +112,5 @@ export PATH=$PATH:/opt/google-cloud-sdk/bin
 export PATH=$PATH:/opt/cfssl/
 export PATH=$PATH:/home/felix/.bin
 export PATH=$PATH:/home/felix/dotfiles/scripts
+export PATH=$PATH:/opt/mssql-tools/bin
 export EDITOR=vim
