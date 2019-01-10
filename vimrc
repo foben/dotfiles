@@ -1,12 +1,10 @@
 " To set up Vundle:
-" 1. run
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"
-" 2. from vim, run
-" :PluginInstall
-"
-" more info at
-" https://github.com/gmarik/Vundle.vim
+" 1.    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" 2.   :PluginInstall
+" 3.   cd ~/.vim/bundle/YouCompleteMe
+" SETUP BUILD DEPENDENCIES 
+" 4.   python3 install.py --go-completer --java-completer
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,11 +22,6 @@ Plugin 'christianrondeau/vim-base64'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'chr4/nginx.vim'
-" To setup YCM (Fedora):
-" sudo dnf install automake gcc gcc-c++ kernel-devel cmake
-" sudo dnf install python-devel python3-devel
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py
 
 call vundle#end()
 
@@ -82,62 +75,27 @@ set wildmode=longest,list,full
 set foldmethod=indent
 set foldlevel=20
 
-" Window navigation with alt key
-"
-" Fix for meta key handling (https://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim)
-"let c='a'
-"while c <= 'z'
-"  exec "set <A-".c.">=\e".c
-"  exec "imap \e".c." <A-".c.">"
-"  let c = nr2char(1+char2nr(c))
-"endw
-"
-"set timeout ttimeoutlen=50
-"
-"nnoremap <silent> <A-j> :wincmd j<CR>
-"nnoremap <silent> <A-h> :wincmd h<CR>
-"nnoremap <silent> <A-l> :wincmd l<CR>
-"nnoremap <silent> <A-q> :wincmd q<CR>
+" Window navigation with Space
 nnoremap <space>h :wincmd h<CR>
 nnoremap <space>j :wincmd j<CR>
 nnoremap <space>k :wincmd k<CR>
 nnoremap <space>l :wincmd l<CR>
 nnoremap <space>q :wincmd q<CR>
 
-
 " MISC
-set autoindent             " re-indent on newline
-syntax on                  " syntax highlighting
-set relativenumber         " show relative line numbers
-set number                 " also show current line number
-set ruler                  " always show cursor pos
-set nowrap                 " no line wrapping
-"set colorcolumn=89        " 
-set clipboard+=unnamedplus " Yank to clipboard
-set noswapfile             " Disable .swp files
-"set list                   " Enable end-of-line char
-" nmap $ g_                " dont include line break for $ movement
-"
-nnoremap <C-d> :read !date -I <CR>
-
-" Disable some weirdness
-inoremap <C-Space> <C-x><C-o>
-" set omnifunc=syntaxcomplete#Complete " Built-in autocomplete
-
 colorscheme solarized
 set background=dark
-""Colorscheme and Font for gvim	
-"if has('gui_running')
-"    set guifont=Source\ Code\ Pro\ 12
-"    colorscheme solarized
-"    set background=dark
-"endif
+set autoindent                  " re-indent on newline
+syntax on                       " syntax highlighting
+set relativenumber              " show relative line numbers
+set number                      " also show current line number
+set ruler                       " always show cursor pos
+set nowrap                      " no line wrapping
+set clipboard+=unnamedplus      " Yank to clipboard
+set noswapfile                  " Disable .swp files
+inoremap <C-Space> <C-x><C-o>   " Disable some weirdness
+" Keep clipboard on exit
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
-"
-"color desert
-set cursorline
-" hi CursorLine cterm=underline
-
-:nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
