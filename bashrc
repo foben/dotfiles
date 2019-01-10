@@ -1,21 +1,21 @@
 # .bashrc
-# Based on Fedora default .bashrc
 
-# Source global definitions
+# Source global definitions, if any
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
 
 # Include ~/.bashrc_additions,
 # which may include semi-sensitive or local definitions
 if [ -f ~/.bashrc_additions ]; then
 	. ~/.bashrc_additions
 fi
-. ~/.bashrc_kubectl
-. ~/.bashrc_oc
+
+#
+# Source K8S completions
+#
+. ~/dotfiles/bashrc_kubectl
+. ~/dotfiles/bashrc_oc
 
 # 
 # PROMPT
@@ -52,7 +52,6 @@ export HISEFILESIZE=10000
 #
 # LESS SETUP
 #
-#alias less=less -S
 #export LESS='-F -X -S $LESS'
 #export LESSOPEN='|~/.lessfilter %s'
 export LESS='-F -S -X -R'
@@ -64,31 +63,29 @@ export GOPATH=/home/$USERNAME/go
 #export GOROOT=/usr/bin/
 
 #
-# MISC. ALIASES
+# ALIASES
 #
-alias listbranches='for D in *; do pushd "$D" > /dev/null 2>/dev/null && printf "%s %s\n" "${PWD##*/}" "$(git branch | grep \*)" && popd > /dev/null 2>/dev/null; done'
-alias ll="ls -lh"
-alias lll="ls -lah"
+# BASE
+alias ll="ls -lh --color"
+alias lll="ls -lah --color"
 alias cp="cp -v"
 alias mv="mv -v"
-alias cd..="cd .."
-alias dtree="tree -d"
-alias cd..4="cd ../../../../"
-alias vim="vimx"
 alias c="xclip -sel c"
 alias grepi="grep -Iirn"
+# GIT
 alias gitlo="git log -n"
-alias prettyjson="python -m json.tool"
-alias xmo="xmodmap ~/.Xmodmap"
-alias k="kubectl"
+alias gits="git status"
 alias gitk="gitk --all &"
-alias please="sudo"
-alias auf="xdg-open"
+alias listbranches='for D in *; do pushd "$D" > /dev/null 2>/dev/null && printf "%s %s\n" "${PWD##*/}" "$(git branch | grep \*)" && popd > /dev/null 2>/dev/null; done'
+# TASK WARRIOR
 alias tl="task list"
 alias td="task done"
 alias ta="task add"
 alias te="task edit"
-alias gits="git status"
+# MISC
+alias prettyjson="python -m json.tool"
+alias xmo="xmodmap ~/.Xmodmap"
+alias k="kubectl"
 alias lock="i3lock -f -c \"$(tr -dc 'A-F0-9' < /dev/urandom | head -c6)\""
 alias diso="date -I"
 alias b64="base64 -w 0"
@@ -96,7 +93,6 @@ alias b64d="base64 --decode"
 alias k="kubectl"
 alias kcns="kubectl config set-context $(kubectl config current-context) --namespace"
 alias dwatch="watch -d -n 1"
-alias devops="cd /home/felix/dev/svh/devops"
 alias oc37=oc
 alias gnutime="/usr/bin/time"
 alias gnutimev='/usr/bin/time -f "\nreal: %E\nuser: %U\nsys: %S\n\nmaxmem: %M\navgres: %t\navgmem: %K\n\nfilein: %I\nfileout: %O\nsockin: %r\nsockout: %s"'
