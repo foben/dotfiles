@@ -14,7 +14,7 @@ if [ -f ~/.bashrc_additions ]; then
 fi
 
 # Source K8S completions
-source ~/dotfiles/bashrc_kubectl
+source <(kubectl completion bash)
 source ~/dotfiles/bashrc_oc
 
 # Source Aliases
@@ -52,4 +52,7 @@ export PATH=$PATH:/home/felix/.bin
 export PATH=$PATH:/home/felix/bin
 export PATH=$PATH:/home/felix/dotfiles/scripts
 export PATH=$PATH:/opt/mssql-tools/bin
+export PATH=$PATH:/opt/azure-cli/bin
 export EDITOR=vim
+
+source '/home/felix/lib/azure-cli/az.completion'
