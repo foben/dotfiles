@@ -34,3 +34,7 @@ alias gnutime="/usr/bin/time"
 alias gnutimev='/usr/bin/time -f "\nreal: %E\nuser: %U\nsys: %S\n\nmaxmem: %M\navgres: %t\navgmem: %K\n\nfilein: %I\nfileout: %O\nsockin: %r\nsockout: %s"'
 alias melde='meld <(echo "") <(echo "") &'
 alias svenv='source venv/bin/activate'
+# NAV
+alias devops="cd /home/felix/dev/svh/devops"
+alias promconf='cd ~/dev/svh/devops/promotor-configs'
+
