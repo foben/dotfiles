@@ -6,6 +6,7 @@ alias ll="ls -lh --color"
 alias lll="ls -lah --color"
 alias cp="cp -v"
 alias mv="mv -v"
+alias rm="rm -v"
 alias c="xclip -sel c"
 alias p="xclip -sel c -o"
 alias grepi="grep -Iirn --color"
@@ -19,6 +20,7 @@ alias tl="task list"
 alias td="task done"
 alias ta="task add"
 alias te="task edit"
+alias tm="task modify"
 # MISC
 alias prettyjson="python -m json.tool"
 alias xmo="xmodmap ~/.Xmodmap"
@@ -34,7 +36,15 @@ alias gnutime="/usr/bin/time"
 alias gnutimev='/usr/bin/time -f "\nreal: %E\nuser: %U\nsys: %S\n\nmaxmem: %M\navgres: %t\navgmem: %K\n\nfilein: %I\nfileout: %O\nsockin: %r\nsockout: %s"'
 alias melde='meld <(echo "") <(echo "") &'
 alias svenv='source venv/bin/activate'
+alias icdiff="icdiff --no-bold --no-headers"
+alias focus="sudo blink1-tool --red"
+alias nofocus="sudo blink1-tool --green"
 # NAV
 alias devops="cd /home/felix/dev/svh/devops"
 alias promconf='cd ~/dev/svh/devops/promotor-configs'
+alias prompy='cd ~/dev/svh/devops/motor/promotor;svenv'
+#K8S
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+alias kcx='kubectl config use-context'
 
+export PASSWORD_STORE_DIR=/home/felix/dev/svh/devops/devops-pass/password-store
