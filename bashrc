@@ -15,7 +15,6 @@ fi
 
 # Source K8S completions
 source <(kubectl completion bash)
-source ~/dotfiles/bashrc_oc
 
 # Source Aliases
 source ~/dotfiles/aliases.sh
