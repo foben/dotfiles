@@ -93,6 +93,7 @@ set ruler                       " always show cursor pos
 set nowrap                      " no line wrapping
 set clipboard+=unnamedplus      " Yank to clipboard
 set noswapfile                  " Disable .swp files
+set encoding=utf-8
 inoremap <C-Space> <C-x><C-o>   " Disable some weirdness
 " Keep clipboard on exit
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
