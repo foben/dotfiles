@@ -78,5 +78,19 @@ unsetopt share_history
 source <(kubectl completion zsh)
 #source <(oc completion zsh)
 #
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
+#export LANG=en_US.UTF-8
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/felix/google-cloud-sdk/path.zsh.inc' ]; then . '/home/felix/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/felix/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/felix/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/felix/.sdkman"
+[[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
+
+export PATH=$PATH:/home/felix/bin
+
+source '/home/felix/lib/azure-cli/az.completion'

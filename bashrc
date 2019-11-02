@@ -55,3 +55,7 @@ export PATH=$PATH:/opt/azure-cli/bin
 export EDITOR=vim
 
 source '/home/felix/lib/azure-cli/az.completion'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/felix/.sdkman"
+[[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
