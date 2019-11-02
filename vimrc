@@ -14,7 +14,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Further Vundle plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
@@ -22,6 +22,9 @@ Plugin 'christianrondeau/vim-base64'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'chr4/nginx.vim'
+Plugin 'aklt/plantuml-syntax'
+
+
 
 call vundle#end()
 
@@ -83,8 +86,8 @@ nnoremap <space>l :wincmd l<CR>
 nnoremap <space>q :wincmd q<CR>
 
 " MISC
-colorscheme solarized
-set background=dark
+"colorscheme dim
+"set background=dark
 set autoindent                  " re-indent on newline
 syntax on                       " syntax highlighting
 set relativenumber              " show relative line numbers
@@ -100,3 +103,4 @@ autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
+set maxmempattern=5000
