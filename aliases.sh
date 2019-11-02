@@ -11,6 +11,7 @@ alias rm="rm -v"
 alias c="xclip -sel c"
 alias p="xclip -sel c -o"
 alias grepi="grep -Iirn --color"
+alias grepic="grep -Iirn --color=always"
 # GIT
 alias gitlo="git log -n"
 alias gits="clear;git status"
