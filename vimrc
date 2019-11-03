@@ -1,8 +1,9 @@
-" To set up Vundle:
-" 1.    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" on Arch, use package gvim instead of vim for clipboard support
+"
+" SETUP Vundle:
+" 1.   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " 2.   :PluginInstall
 " 3.   cd ~/.vim/bundle/YouCompleteMe
-" SETUP BUILD DEPENDENCIES 
 " 4.   python3 install.py --go-completer --java-completer
 
 set nocompatible
