@@ -2,9 +2,9 @@
 # ALL THE ALIASES 🤷
 #
 # BASE
-alias ll="ls -lh --time-style=long-iso --group-directories-first -N"
-alias lll="ls -lh --time-style=long-iso --group-directories-first -N -a"
-alias llt="ls -lh --time-style=long-iso --group-directories-first -N -t"
+alias ll="ls -lh --time-style=long-iso --group-directories-first -N --color"
+alias lll="ls -lh --time-style=long-iso --group-directories-first -N -a --color"
+alias llt="ls -lh --time-style=long-iso --group-directories-first -N -t --color"
 alias cp="cp -v"
 alias mv="mv -v"
 alias rm="rm -v"
