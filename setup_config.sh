@@ -3,7 +3,7 @@ do
   dirname=`basename $fulldir`;
   pushd ~/.config > /dev/null
   echo "Creating link for $dirname"
-  ln -fs "`realpath ~/dotfiles/dot_config/$dirname/`" "$dirname"
+  ln -fvs "`realpath ~/dotfiles/dot_config/$dirname/`" "$dirname"
   popd > /dev/null
 
 done

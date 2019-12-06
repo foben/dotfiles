@@ -14,7 +14,7 @@ alias grepi="grep -Iirn --color"
 alias grepic="grep -Iirn --color=always"
 # GIT
 alias gitlo="git log -n"
-alias gits="clear;git status"
+alias gits="clear -x;git status"
 alias gitk="gitk --all &"
 alias listbranches='for D in *; do pushd "$D" > /dev/null 2>/dev/null && printf "%s %s\n" "${PWD##*/}" "$(git branch | grep \*)" && popd > /dev/null 2>/dev/null; done'
 # TASK WARRIOR
@@ -31,7 +31,8 @@ alias diso="date -I"
 alias b64="base64 -w 0"
 alias b64d="base64 --decode"
 alias k="kubectl"
-alias kcns="kubectl config set-context $(kubectl config current-context) --namespace"
+#TODO: fix alias!
+alias kcns='kubectl config set-context $(kubectl config current-context) --namespace'
 alias dwatch="watch -d -n 1"
 alias oc37=oc
 alias gnutime="/usr/bin/time"
