@@ -104,4 +104,4 @@ autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " Inspiration and thanks:
 " https://github.com/jeffknupp/config_files/blob/master/.vimrc
-set maxmempattern=5000
+set maxmempattern=8000
