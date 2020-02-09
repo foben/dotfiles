@@ -81,6 +81,9 @@ source <(kubectl completion zsh)
 #export LC_ALL=en_US.UTF-8
 #export LANG=en_US.UTF-8
 
+# source secrets aliases
+if [ -f '/home/felix/dotfiles/secrets.sh' ]; then . '/home/felix/dotfiles/secrets.sh'; fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/felix/google-cloud-sdk/path.zsh.inc' ]; then . '/home/felix/google-cloud-sdk/path.zsh.inc'; fi
 
