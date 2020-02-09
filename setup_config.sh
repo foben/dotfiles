@@ -1,9 +1,14 @@
 for fulldir in ./dot_config/*;
 do
   dirname=`basename $fulldir`;
-  pushd ~/.config > /dev/null
+  echo "============================================"
   echo "Creating link for $dirname"
-  ln -fvs "`realpath ~/dotfiles/dot_config/$dirname/`" "$dirname"
-  popd > /dev/null
-
+  echo "   ($fulldir)"
+  echo "============================================"
+  config_dir=`realpath ~/.config`
+  target=`realpath ~/dotfiles/dot_config/$dirname`
+  echo "config_dir: $config_dir"
+  echo "target: $target"
+  ln -ivs -t "$config_dir" "$target"
+  echo ""
 done
