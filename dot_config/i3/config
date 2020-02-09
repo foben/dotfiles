@@ -23,8 +23,8 @@ font pango:monospace 16
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -156,7 +156,8 @@ bindsym $mod+r mode "resize"
 bar {
  	tray_output primary
 	#status_command bumblebee-status -m brightness battery pasink pasource datetime -p time.format="%H:%MM" -p battery.showdevice="True" -t solarized-powerline
-	status_command bumblebee-status -m brightness battery pasink pasource  -p time.format="%H:%MM" -p battery.showdevice="True" -t solarized-powerline
+	#status_command bumblebee-status -m brightness battery pasink pasource  -p time.format="%H:%MM" -p battery.showdevice="True" -t solarized-powerline
+        status_command i3status
 }
 
 ### Custom Additions
@@ -174,7 +175,7 @@ bindsym $mod+F8 exec python /home/felix/dev/python/x-mumoma/x-mumoma.py arrange 
 
 
 # Autostart
-exec feh --bg-fill Dropbox/Photos/0000_Wallpaper/firewatch.jpg
+#exec feh --bg-fill Dropbox/Photos/0000_Wallpaper/firewatch.jpg
 #exec --no-startup-id dropbox start
-exec --no-startup-id flameshot
+#exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
