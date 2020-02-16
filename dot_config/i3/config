@@ -30,7 +30,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
+bindsym $mod+Tab exec rofi -show window
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -158,13 +161,31 @@ bar {
 	#status_command bumblebee-status -m brightness battery pasink pasource datetime -p time.format="%H:%MM" -p battery.showdevice="True" -t solarized-powerline
 	#status_command bumblebee-status -m brightness battery pasink pasource  -p time.format="%H:%MM" -p battery.showdevice="True" -t solarized-powerline
         status_command i3status
+	height 30
 }
+##########################################
+###### STYLING
 
-### Custom Additions
-hide_edge_borders both
+#hide_edge_borders both
+for_window [class=".*"] border pixel 2
+gaps outer 0
+gaps inner 25
+smart_borders on
+
+set $bg-color            #000000
+set $inactive-bg-color   #000000
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+
+
+
+##########################################
+###### Custom Additions
 
 bindsym $mod+x move container to output primary
-bindsym $mod+F12 exec python2 /home/felix/xrandr-toggle.py
+#bindsym $mod+F12 exec python2 /home/felix/xrandr-toggle.py
 bindsym $mod+p exec i3lock -f -c \"$(tr -dc 'A-F0-9' < /dev/urandom | head -c6)\"
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Print exec flameshot gui
@@ -173,8 +194,12 @@ bindsym $mod+F6 exec python /home/felix/dev/python/x-mumoma/x-mumoma.py arrange 
 bindsym $mod+F7 exec python /home/felix/dev/python/x-mumoma/x-mumoma.py arrange DP2-1 DP2-2
 bindsym $mod+F8 exec python /home/felix/dev/python/x-mumoma/x-mumoma.py arrange DP2-2
 
+#assign [class=firefox] 6
 
-# Autostart
+
+##########################################
+###### Autostart
+ 
 #exec feh --bg-fill Dropbox/Photos/0000_Wallpaper/firewatch.jpg
 #exec --no-startup-id dropbox start
 #exec --no-startup-id flameshot
