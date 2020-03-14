@@ -18,7 +18,9 @@ foreground = #dfdfdf
 foreground-alt = #555
 primary = #b6e354
 secondary = #e60053
-alert = #bd2c40
+alert = #f92672
+
+hl-purple = #6d22e1
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -59,7 +61,7 @@ modules-right = xbacklight pulseaudio memory cpu wlan eth battery date powermenu
 
 tray-position = center
 tray-padding = 0
-tray-background = #0063ff
+#tray-background = #0063ff
 #tray-background = #ff00ff
 
 wm-restack = i3
@@ -92,7 +94,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.hl-purple}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -237,7 +239,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.alert}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
