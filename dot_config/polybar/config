@@ -118,8 +118,8 @@ label-urgent-padding = 2
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format = <label>
+label = " %percentage%%"
 
 bar-width = 10
 bar-indicator = |
