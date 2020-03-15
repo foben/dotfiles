@@ -1,3 +1,6 @@
 [submodule "dot_config/polybar/polybar-pulseaudio-control"]
 	path = dot_config/polybar/polybar-pulseaudio-control
 	url = https://github.com/marioortizmanero/polybar-pulseaudio-control.git
+[submodule "dot_config/polybar/polybar-pulseaudio-input-control"]
+	path = dot_config/polybar/polybar-pulseaudio-input-control
+	url = git@github.com:foben/polybar-pulseaudio-input-control.git

@@ -57,9 +57,11 @@ font-5 = Font Awesome 5 Pro Solid:style=Solid:size=14
 modules-left = i3
 #removed modules: filesystem, alsa, mpd
 #modules-center = xwindow
-modules-right = xbacklight pulseaudio memory cpu wlan eth battery date powermenu
+#modules-right = pulseaudio-input-control pulseaudio-control xbacklight memory cpu wlan eth battery date powermenu
+modules-right = pulseaudio-control xbacklight memory cpu wlan eth battery date powermenu
 
-tray-position = center
+#tray-position = center
+tray-position = left
 tray-padding = 0
 #tray-background = #0063ff
 #tray-background = #ff00ff
@@ -211,12 +213,42 @@ ramp-volume-2 = 
 
 click-right = pavucontrol &
 
+[module/pulseaudio-input-control]
+type = custom/script
+tail = true
+label=%output%
+#format-underline = ${colors.blue}
+
+exec = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --listen
+click-left = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --togmute
+click-right = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --change
+click-middle = exec pavucontrol &
+scroll-up = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --up
+scroll-down = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --down
+label-padding = 2
+#label-foreground = ${colors.foreground}
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+label=%output%
+#format-underline = ${colors.blue}
+
+exec = ~/.config/polybar/polybar-pulseaudio-control/pulseaudio-control.bash --listen
+click-left = ~/.config/polybar/polybar-pulseaudio-control/pulseaudio-control.bash --togmute
+click-right = ~/.config/polybar/polybar-pulseaudio-control/pulseaudio-control.bash --change
+click-middle = exec pavucontrol &
+scroll-up = ~/.config/polybar/polybar-pulseaudio-control/pulseaudio-control.bash --up
+scroll-down = ~/.config/polybar/polybar-pulseaudio-control/pulseaudio-control.bash --down
+label-padding = 2
+#label-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+
 
 format-charging = <label-charging>
 
