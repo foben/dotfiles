@@ -44,21 +44,20 @@ border-color = #00000000
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 5
+module-margin-left = 2
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=14;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Noto Color Emoji:style=Regular:scale=6
-font-3 = siji:pixelsize=18;5
-font-4 = Font Awesome 5 Pro Regular:style=Regular:size=14
-font-5 = Font Awesome 5 Pro Solid:style=Solid:size=14
+font-1 = Font Awesome 5 Pro Regular:style=Regular:size=14
+font-2 = Font Awesome 5 Pro Solid:style=Solid:size=14
+font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-4 = Noto Color Emoji:style=Regular:scale=6
+font-5 = siji:pixelsize=18;5
 
 modules-left = i3
 #removed modules: filesystem, alsa, mpd
 #modules-center = xwindow
-#modules-right = pulseaudio-input-control pulseaudio-control xbacklight memory cpu wlan eth battery date powermenu
-modules-right = pulseaudio-control xbacklight memory cpu wlan eth battery date powermenu
+modules-right = pulseaudio-input-control pulseaudio-control xbacklight memory cpu wlan eth battery date powermenu
 
 #tray-position = center
 tray-position = left
@@ -225,7 +224,7 @@ click-right = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-inpu
 click-middle = exec pavucontrol &
 scroll-up = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --up
 scroll-down = ~/.config/polybar/polybar-pulseaudio-input-control/pulseaudio-input-control.bash --down
-label-padding = 2
+label-padding = 0
 #label-foreground = ${colors.foreground}
 
 [module/pulseaudio-control]
