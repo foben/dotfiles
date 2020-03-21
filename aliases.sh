@@ -17,6 +17,7 @@ alias gitlo="git log -n"
 alias gits="clear -x;git status"
 alias gitk="gitk --all &"
 alias listbranches='for D in *; do pushd "$D" > /dev/null 2>/dev/null && printf "%s %s\n" "${PWD##*/}" "$(git branch | grep \*)" && popd > /dev/null 2>/dev/null; done'
+alias tig="kitty tig --all 2>/dev/null &"
 # TASK WARRIOR
 alias tl="task list"
 alias td="task done"
