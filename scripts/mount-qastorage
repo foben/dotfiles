@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+ 
+set -e
+ 
+echo -n 'LDAP Password: '
+read -s PASSWORD
+ 
+COMMAND='sudo mount -t cifs -o username=f.obenauer,password='"$PASSWORD"',vers=1.0,uid='"$(id -u)"',gid='"$(id -g)"',file_mode=0660,dir_mode=0770'
+ 
+echo 'Mounting...'
+echo "$COMMAND"
+
+$COMMAND //qastorage/transfer transfer
+echo "transfer mounted"
+$COMMAND //qastorage/Mitarbeiter mitarbeiter
+echo "Mitarbeiter mounted"
+$COMMAND //qastorage/Intern intern
+echo "Intern mounted"
+ 
+echo 'Mounted'

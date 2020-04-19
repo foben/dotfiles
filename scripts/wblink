@@ -1,0 +1,30 @@
+#!/bin/zsh
+set -euo pipefail
+
+# This is a script that will generate Workbench links for files in your local git repository.
+# Run it from your local repository and pass it a file to get a matching workbench link into your clipboard.
+#
+# Example uses:
+# - pass a file in your pwd:
+#   wblink main.tf
+# - pass a file in a subfolder of your pwd:
+#   wblink environemtns/main.tf
+# - optionally add a line number (default is 1):
+#   wblink environemtns/main.tf 42
+#
+# Limitiations:
+# - requires zsh (line 24: complex replacement)
+# - requires MacOS (pbcopy, open)
+
+
+file=$1
+line=${2:="1"}
+baseUrl=$(git config --get remote.origin.url | rev | cut -d '.' -f 2- | rev)
+branch=$(git rev-parse --abbrev-ref HEAD)
+folderInRepo=$(echo "${$(pwd)#"$(git rev-parse --show-toplevel)"}/" | sed 's/^\///')
+
+workbenchLink="$baseUrl/blob/$branch/$folderInRepo$file#L$line"
+
+echo "$workbenchLink" | xclip -sel c
+#open -a Firefox "$workbenchLink"
+

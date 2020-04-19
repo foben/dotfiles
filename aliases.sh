@@ -46,7 +46,7 @@ alias nofocus="sudo blink1-tool --green"
 # NAV
 alias devops="cd /home/felix/dev/svh/devops"
 alias promconf='cd ~/dev/svh/devops/promotor-configs'
-alias prompy='cd ~/dev/svh/devops/motor/promotor;svenv'
+alias prompy='cd ~/dev/svh/devops/promotor-python;svenv'
 #K8S
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
 alias kcx='kubectl config use-context'

@@ -44,6 +44,7 @@ autocmd BufEnter *.yml.j2 :setlocal filetype=yaml
 autocmd BufEnter *.yaml.j2 :setlocal filetype=yaml
 autocmd FileType markdown setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd BufRead,BufNewFile *.conf set filetype=nginx
+autocmd FileType plantuml setlocal expandtab shiftwidth=2 softtabstop=2
 " Programming
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType java setlocal expandtab shiftwidth=4 softtabstop=4

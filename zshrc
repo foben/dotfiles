@@ -16,6 +16,11 @@ ZSH_THEME="gnzh"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 CASE_SENSITIVE="true"
+function update_last_loc {
+	pwd > /tmp/last_loc
+}
+#precmd_functions=($precmd_functions:update_last_loc)
+precmd_functions+=(update_last_loc)
 
 
 # Uncomment the following line if you want to change the command execution time
@@ -94,6 +99,16 @@ if [ -f '/home/felix/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/felix
 export SDKMAN_DIR="/home/felix/.sdkman"
 [[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
 
-export PATH=$PATH:/home/felix/bin
+export PATH=$PATH:/home/felix/bin:/home/felix/.local/bin
 
-source '/home/felix/lib/azure-cli/az.completion'
+source '/home/felix/dev/azure-cli/az.completion'
+
+function aur {
+	pushd ~/AUR
+	reponame=`sed 's/https\:\/\/aur.archlinux.org\/\(.*\).git/\1/g' <<< $1`
+	git clone "$1"
+	cd "/home/felix/AUR/$reponame"
+	makepkg -si
+	popd
+	popd
+}
