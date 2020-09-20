@@ -57,7 +57,7 @@ font-5 = siji:pixelsize=18;5
 modules-left = i3
 #removed modules: filesystem, alsa, mpd
 modules-center = xwindow
-modules-right = pulseaudio-control pulseaudio-input-control xbacklight memory cpu wlan eth0 eth1 battery date powermenu
+modules-right = dunst-toggle pulseaudio-control pulseaudio-input-control xbacklight memory cpu wlan eth0 eth1 battery date powermenu
 
 #tray-position = center
 tray-position = left
@@ -77,7 +77,8 @@ enable-ipc = true
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:90:...%
+#label = %title%
 
 [module/i3]
 type = internal/i3
@@ -206,6 +207,12 @@ format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
+
+[module/dunst-toggle]
+type = custom/script
+exec = ~/.config/polybar/dunst-toggle/dunst-toggle.bash
+click-left = ~/.config/polybar/dunst-toggle/dunst-toggle.bash toggle
+interval = 1
 
 [module/pulseaudio-input-control]
 type = custom/script
