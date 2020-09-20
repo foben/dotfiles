@@ -17,7 +17,7 @@ ZSH_THEME="gnzh"
 COMPLETION_WAITING_DOTS="true"
 CASE_SENSITIVE="true"
 function update_last_loc {
-	pwd > /tmp/last_loc
+	pwd > /home/felix/.last_location
 }
 #precmd_functions=($precmd_functions:update_last_loc)
 precmd_functions+=(update_last_loc)
